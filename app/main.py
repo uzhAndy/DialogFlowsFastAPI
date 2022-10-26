@@ -1,8 +1,8 @@
 # packages
-import json
+from data_prep.functions.data_import import extract_top_movies 
+from data_prep.functions.data_service import extract_filters
+from data_prep.functions.data_service import get_movie_recommendation
 from data_prep.functions.NLG import create_response
-from data_prep.functions.data_import import extract_top_movies
-from data_prep.functions.data_service import extract_filters, get_movie_recommendation
 
 # imports
 from pydantic import BaseModel
