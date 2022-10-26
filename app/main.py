@@ -24,6 +24,9 @@ app = FastAPI()
 async def root():
     return {'message': 'Hello World'}
 
+@app.get('/click_me')
+async def click_me():
+    return {'message': 'Ich lieb dich, Angela!'}
 
 @app.post('/movies')
 async def get_movie(req_movie: Request):
