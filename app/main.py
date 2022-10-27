@@ -8,6 +8,7 @@ from data_prep.functions.NLG import create_response
 from pydantic import BaseModel
 from typing import Dict
 from fastapi import FastAPI, status
+from fastapi.responses import HTMLResponse
 
 
 class Request(BaseModel):
@@ -24,9 +25,20 @@ app = FastAPI()
 async def root():
     return {'message': 'Hello World'}
 
-@app.get('/click_me')
-async def click_me():
-    return {'message': 'Ich lieb dich, Angela!'}
+@app.get("/click_me", response_class=HTMLResponse)
+async def read_items():
+    html_content = """
+    <html>
+        <head>
+            <title>Click Me</title>
+        </head>
+        <body>
+            <h1>Ich lieb dich, Angela</h1>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Coraz%C3%B3n.svg">
+        </body>
+    </html>
+    """
+    return HTMLResponse(content=html_content, status_code=200)
 
 @app.post('/movies')
 async def get_movie(req_movie: Request):
