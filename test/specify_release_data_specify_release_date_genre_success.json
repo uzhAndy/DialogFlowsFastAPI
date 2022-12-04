@@ -1,0 +1,67 @@
+{
+  "responseId": "9bd46720-cc6d-4cdd-9ffd-0e885c4ec3c6-0a3836f2",
+  "queryResult": {
+    "queryText": "Horror",
+    "action": "specify_release_date.specify_release_date-custom",
+    "parameters": {
+      "genre": "horror"
+    },
+    "allRequiredParamsPresent": true,
+    "fulfillmentText": "Something unexpected happened. Please start again.",
+    "fulfillmentMessages": [
+      {
+        "text": {
+          "text": [
+            "Something unexpected happened. Please start again."
+          ]
+        }
+      }
+    ],
+    "outputContexts": [
+      {
+        "name": "projects/movie-bot-kasb/locations/global/agent/sessions/911faa85-572a-9b29-0a04-d46715a16521/contexts/specify_release_date-followup",
+        "lifespanCount": 2,
+        "parameters": {
+          "release_year": 1994,
+          "release_year.original": "1994",
+          "genre": "horror",
+          "genre.original": "Horror"
+        }
+      },
+      {
+        "name": "projects/movie-bot-kasb/locations/global/agent/sessions/911faa85-572a-9b29-0a04-d46715a16521/contexts/specify_release_date_genre-followup",
+        "lifespanCount": 2,
+        "parameters": {
+          "genre": "horror",
+          "genre.original": "Horror"
+        }
+      },
+      {
+        "name": "projects/movie-bot-kasb/locations/global/agent/sessions/911faa85-572a-9b29-0a04-d46715a16521/contexts/__system_counters__",
+        "parameters": {
+          "no-input": 0,
+          "no-match": 0,
+          "genre": "horror",
+          "genre.original": "Horror"
+        }
+      }
+    ],
+    "intent": {
+      "name": "projects/movie-bot-kasb/locations/global/agent/intents/3a4e3084-28c6-479e-a2d1-826f96a7a620",
+      "displayName": "specify_release_date_genre"
+    },
+    "intentDetectionConfidence": 0.45104265,
+    "languageCode": "en",
+    "sentimentAnalysisResult": {
+      "queryTextSentiment": {
+        "score": -0.8,
+        "magnitude": 0.8
+      }
+    }
+  },
+  "originalDetectIntentRequest": {
+    "source": "DIALOGFLOW_CONSOLE",
+    "payload": {}
+  },
+  "session": "projects/movie-bot-kasb/locations/global/agent/sessions/911faa85-572a-9b29-0a04-d46715a16521"
+}
